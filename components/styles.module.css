@@ -1,0 +1,17 @@
+.button{
+    background: #0066A2;
+  color: white;
+  border-style: outset;
+  border-color: #0066A2;
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  font: bold15px arial,sans-serif;
+  text-shadow: none;
+}
+
+.button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  border-color: green;
+}
