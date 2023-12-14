@@ -8,21 +8,11 @@
   background-color: rgb(255, 252, 247);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
   margin: 0 0 1rem;
   line-height: 1.15;
   font-size: 2.6rem;
+  font-family: League Spartan;
 }
 
 .title {
@@ -44,7 +34,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  font-family: Sanchez;
   max-width: 800px;
   margin-top: 3rem;
 }

@@ -3,7 +3,7 @@ import styles from "./styles.module.css"
 import { doc, updateDoc, increment } from "firebase/firestore"
 import  db  from "../firebaseConfig";
 
-export default function SeuComponente() {
+export default function SupportButton() {
     const [buttonText, setButtonText] = useState('Tenho interesse');
     const [buttonDisabled, setButtonDisabled] = useState(false);
 
@@ -27,7 +27,7 @@ export default function SeuComponente() {
         className={styles.button}
         onClick={handleButtonClick}
         style={{ backgroundColor: buttonDisabled ? "green" : '"#0066A2"', 
-                color: buttonDisabled ? "black" : "black"
+                color: "white"
             }}
         disabled={buttonDisabled}
       >

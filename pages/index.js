@@ -4,18 +4,17 @@ import styles from '../styles/Home.module.css';
 import Button from '../components/button';
 
 export default function Home() {
-
+    
   const [buttonText, setButtonText] = useState('Tenho interesse');
 
-  const changeButton = () => {
-    setButtonText('Obrigado pelo seu apoio!');
-  };
+    const changeButton = () => {
+      setButtonText('Obrigado pelo seu apoio!');
+    };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Ficha Fácil</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
