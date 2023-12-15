@@ -8,7 +8,7 @@ export default function SupportButton() {
     const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const handleButtonClick = async () => {
-      const counterRef = doc(db, 'contadores', 'teste')
+      const counterRef = doc(db, 'contadores', 'counter')
 
       try {
         await updateDoc(counterRef, {
