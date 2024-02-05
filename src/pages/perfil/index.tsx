@@ -8,7 +8,7 @@ export function Perfil({ navigation }){
     const [password, setPassword] = useState('joao123');
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
-    const handleInputChange = (text) => {
+    const handleInputChange = (text: string) => {
         setPassword(text);
     };
 
@@ -48,7 +48,7 @@ export function Perfil({ navigation }){
                 value={password}
                 onChangeText={handleInputChange}
             />
-            <TouchableOpacity style={styles.mostrarOcultarButton} onPress={handleMostrarOcultarSenha}>
+            <TouchableOpacity onPress={handleMostrarOcultarSenha}>
                 <Text>{mostrarSenha ? 'Ocultar' : 'Mostrar'}</Text>
             </TouchableOpacity>
             <TouchableOpacity style = {styles.button}>

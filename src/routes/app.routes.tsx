@@ -1,10 +1,12 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Home } from '../pages/home'
-import { Login } from '../pages/login'
-import { Cadastro } from '../pages/cadastro'
-import { Pagamento } from '../pages/pagamento'
+import { Home } from '../pages/home/index'
+import { Login } from '../pages/login/index'
+import { Cadastro } from '../pages/cadastro/index'
+import { Pagamento } from '../pages/pagamento/index'
 import  BottomRoutes  from './bottomRoutes';
 
 const Tab = createStackNavigator();
