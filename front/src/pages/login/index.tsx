@@ -1,22 +1,22 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, Image, StyleSheet, TouchableOpacity} from 'react-native'
+import React, { useState } from 'react';
+import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity } from 'react-native'
 
-export function Login({ navigation }){
+export function Login({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
-    const handleInputChange = (text:string) => {
+    const handleInputChange = (text: string) => {
         setPassword(text);
     };
 
     const handleMostrarOcultarSenha = () => {
         setMostrarSenha((prevState) => !prevState);
     };
-    return(
-        <View style = {styles.content}>
-            <Text style = {styles.title}>Bem Vindo!</Text>
-            <Image style = {styles.logo}
+    return (
+        <View style={styles.content}>
+            <Text style={styles.title}>Bem Vindo!</Text>
+            <Image style={styles.logo}
                 source={require("../../assets/login.png")}
             />
             <TextInput
@@ -32,61 +32,63 @@ export function Login({ navigation }){
                 value={password}
                 onChangeText={handleInputChange}
             />
-            <TouchableOpacity  onPress={handleMostrarOcultarSenha}>
+            <TouchableOpacity onPress={handleMostrarOcultarSenha}>
                 <Text>{mostrarSenha ? 'Ocultar' : 'Mostrar'}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {[styles.link, {marginTop:30}]} onPress={() => navigation.navigate('Cadastro')}>
+            <TouchableOpacity style={[styles.link, { marginTop: 30 }]} onPress={() => navigation.navigate('Cadastro')}>
                 <Text>Cadastre-se</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.link} onPress={() => navigation.navigate('Cadastro')}>
+            <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('Cadastro')}>
                 <Text>Esqueceu o login?</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.link} onPress={() => navigation.navigate('Cadastro')}>
+            <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('Cadastro')}>
                 <Text>Esqueceu a senha?</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.button} onPress={() => navigation.navigate('Principal')}>
-                <Text style = {styles.buttonText}>Entrar</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Principal')}>
+                <Text style={styles.buttonText}>Entrar</Text>
             </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    content:{
+    content: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    title:{
+    title: {
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 20,
     },
-    logo:{
-        width: '100%', 
-        height: 200, 
+    logo: {
+        width: '100%',
+        height: 200,
         marginLeft: 20,
         marginBottom: 50,
     },
-    input:{
+    input: {
         width: '80%',
-        height: 40,
+        height: 45,
         fontSize: 20,
         borderBottomWidth: 1,
         borderBottomColor: '#000',
         padding: 10,
+        marginTop: 10,
+        borderRadius: 5, 
     },
-    text:{
+    text: {
         fontSize: 15,
         fontWeight: 'bold',
         alignSelf: 'flex-start',
     },
-    link:{
+    link: {
         fontSize: 15,
         fontWeight: 'bold',
         alignSelf: 'flex-end',
     },
-    button:{
+    button: {
         backgroundColor: '#347af0',
         width: '50%',
         height: 50,
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         marginTop: 50,
     },
-    buttonText:{
+    buttonText: {
         color: '#FFF',
         fontSize: 20,
     },

@@ -19,6 +19,9 @@ export function Fichas({ navigation }){
             <TouchableOpacity style = {styles.button} onPress={() => navigation.navigate('Pagamento')}>
                 <Text style = {styles.buttonText}>Comprar</Text>
             </TouchableOpacity>
+            <TouchableOpacity style= {styles.historyButton} onPress={() => navigation.navigate('Histórico')}>
+                <Text style = {styles.historyText}>Histórico</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -72,4 +75,18 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontSize: 20,
     },
+    historyButton: {
+        width: '50%',
+        height: 50,
+        backgroundColor: "lightgray",
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 8,
+        marginTop: 50,
+    },
+    historyText: {
+        color: "#000",
+        fontSize: 20,
+
+    }
 })
