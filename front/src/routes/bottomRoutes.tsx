@@ -5,8 +5,24 @@ import { Menu } from '../pages/menu'
 import { Fichas } from '../pages/fichas'
 import { Perfil } from '../pages/perfil'
 import { Ionicons } from '@expo/vector-icons'
+import { History } from '../pages/history'
+import { Admin } from '../pages/admin';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+function StackPagesFichas() {
+    return (
+      <Stack.Navigator
+        initialRouteName="Fichas"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Fichas" component={Fichas} />
+        <Stack.Screen name="Histórico" component={History} />
+      </Stack.Navigator>
+    );
+  }
 
 export default function BottomRoutes(){
     return(
@@ -26,7 +42,7 @@ export default function BottomRoutes(){
             />
             <Tab.Screen 
                 name = "Fichas" 
-                component={Fichas}
+                component={StackPagesFichas}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({focused, size, color}: {focused:any, size:any, color:any}) => {
@@ -39,7 +55,7 @@ export default function BottomRoutes(){
             />
             <Tab.Screen 
                 name = "Perfil" 
-                component={Perfil}
+                component={Perfil} //mudar para Admin
                 options={{
                     headerShown: false,
                     tabBarIcon: ({focused, size, color}: {focused:any, size:any, color:any}) => {
